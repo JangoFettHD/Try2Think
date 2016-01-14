@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mikhail.try2think.Training"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:paddingTop="5dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightblue800"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ico_levels"
+            android:src="@drawable/new_coins_iconv2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ico_coins"
+            android:src="@drawable/new_lvl_iconv2"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/ico_levels"
+            android:layout_alignStart="@+id/ico_levels"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coins"
+            android:textSize="15dp"
+            android:text=""
+            android:layout_alignTop="@+id/ico_coins"
+            android:layout_toLeftOf="@+id/ico_coins"
+            android:layout_toStartOf="@+id/ico_coins"
+            android:layout_alignBottom="@+id/ico_coins"
+            android:layout_marginRight="3dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/levels"
+            android:textSize="15dp"
+            android:text=""
+            android:layout_alignTop="@+id/ico_levels"
+            android:layout_toLeftOf="@+id/ico_levels"
+            android:layout_toStartOf="@+id/ico_levels"
+            android:layout_alignBottom="@+id/ico_levels"
+            android:layout_marginRight="3dp"
+            android:visibility="invisible" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Обучение"
+            android:id="@+id/textView2"
+            android:textColor="#FFFFFF"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/b_help"
+            android:background="@drawable/help_states"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:id="@+id/b_menu"
+            android:background="@drawable/back_states"
+            android:onClick="onClick"
+            android:textColor="#FFFFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=">"
+            android:id="@+id/next"
+            android:background="@drawable/rectangle_rounded_all"
+            android:elevation="4dp"
+            android:onClick="onClick"
+            android:textSize="25dp"
+            android:layout_gravity="right"
+            android:layout_alignTop="@+id/prev"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="15dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="&lt;"
+            android:id="@+id/prev"
+            android:background="@drawable/rectangle_rounded_all"
+            android:elevation="4dp"
+            android:onClick="onClick"
+            android:textSize="25dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/view"
+            android:layout_above="@+id/name_REB"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="Правило №1"
+            android:id="@+id/num_REB"
+            android:layout_gravity="center_horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:textColor="@color/lightblue800"
+            android:textSize="26dp"
+            android:textAlignment="center"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Знаки препинания и пробелы в ребусе не учитываются"
+            android:id="@+id/descrip_REB"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/lightblue800"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="Ребус ОТ И ДО"
+            android:id="@+id/name_REB"
+            android:layout_above="@+id/descrip_REB"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/lightblue800"
+            android:textAlignment="center"
+            android:textSize="26dp" />
+    </RelativeLayout>
+
+
+</LinearLayout>

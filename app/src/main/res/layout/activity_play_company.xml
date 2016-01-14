@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:paddingBottom="0dp"
+    android:background="@color/lightblue000"
+
+    tools:context="com.example.mikhail.try2think.CreatorLvls">
+
+    <ImageView
+
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/imageView"
+        android:layout_below="@+id/relativeLayout2"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_above="@+id/relativeLayout3"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:baselineAlignBottom="false" />
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:paddingTop="5dp"
+        android:id="@+id/relativeLayout3"
+        android:layout_alignParentTop="false"
+        android:background="#ffffff"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="4dp"
+        android:layout_alignParentBottom="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="false"
+            android:layout_alignParentTop="false">
+
+            <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="31dp"
+            android:inputType="textPersonName"
+            android:id="@+id/vvod"
+
+            android:textColor="@color/colorPrimary"
+            android:background="#ffffff"
+            android:hint="Введите ваш ответ..."
+            android:textColorHint="@color/lightblue200"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/b_next"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:maxLength="25"
+                android:maxWidth="125dp" />
+        </FrameLayout>
+
+        <Button
+            android:elevation="4dp"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/button_next_states"
+            android:id="@+id/b_next"
+            android:onClick="onClick"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="5dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:paddingTop="5dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_alignParentTop="true"
+        android:background="@color/lightblue800"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ico_levels"
+            android:src="@drawable/new_lvl_iconv2"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="7dp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:id="@+id/ico_coins"
+            android:src="@drawable/new_coins_iconv5"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/ico_levels"
+            android:layout_alignStart="@+id/ico_levels" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/coins"
+            android:textSize="15dp"
+            android:text=""
+            android:layout_alignTop="@+id/ico_coins"
+            android:layout_toLeftOf="@+id/ico_coins"
+            android:layout_toStartOf="@+id/ico_coins"
+            android:layout_alignBottom="@+id/ico_coins"
+            android:layout_marginRight="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/levels"
+            android:textSize="15dp"
+            android:text=""
+            android:layout_alignTop="@+id/ico_levels"
+            android:layout_toLeftOf="@+id/ico_levels"
+            android:layout_toStartOf="@+id/ico_levels"
+            android:layout_alignBottom="@+id/ico_levels"
+            android:layout_marginRight="3dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/b_help"
+            android:background="@drawable/help_states"
+            android:onClick="onClick"
+            android:textColor="#ffffff"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="55dp"
+            android:layout_height="60dp"
+            android:id="@+id/b_menu"
+            android:background="@drawable/back_states"
+            android:onClick="onClick"
+            android:textColor="#FFFFFFFF"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/help_window"
+        android:visibility="visible"
+        android:elevation="6dp"
+        android:background="#84000000"
+        android:clickable="true">
+
+        <RelativeLayout
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:elevation="6dp"
+            android:background="@drawable/rectangle_blue">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Помощь"
+                    android:id="@+id/textView"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:textColor="#FFFFFF" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="New Text"
+                    android:id="@+id/helpw_text"
+                    android:layout_below="@+id/textView"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="15dp" />
+
+                <GridLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:columnCount="3"
+                    android:rowCount="1"
+                    android:layout_gravity="center">
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Назад"
+                        android:id="@+id/helpw_hide"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:onClick="onClick"
+                        android:background="@drawable/text_button" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Подсказка"
+                        android:id="@+id/helpw_help"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:onClick="onClick"
+                        android:background="@drawable/text_button"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp" />
+
+                    <Button
+                        style="?android:attr/buttonStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ответ"
+                        android:id="@+id/helpw_answer"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentEnd="true"
+                        android:onClick="onClick"
+                        android:background="@drawable/text_button" />
+
+                </GridLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+</RelativeLayout>
